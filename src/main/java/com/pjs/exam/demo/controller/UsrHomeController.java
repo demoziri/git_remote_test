@@ -9,7 +9,7 @@ public class UsrHomeController {
 	
 	@RequestMapping("/usr/home/main")
 	public String showMain() {
-		
+		System.out.println("back 테스트");
 		return "usr/home/main"; //jsp
 	}
 	
