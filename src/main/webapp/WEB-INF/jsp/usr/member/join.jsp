@@ -27,11 +27,19 @@
 			return;
 		}
 		
+<<<<<<< HEAD
 		form.loginPw.value = form.loginPw.value.trim();
 		
 		if ( form.loginPw.value.length == 0 ) {
 			alert('비밀번호를 입력해주세요.');
 			form.loginPw.focus();
+=======
+		form.loginPwInput.value = form.loginPwInput.value.trim();
+		
+		if ( form.loginPwInput.value.length == 0 ) {
+			alert('비밀번호를 입력해주세요.');
+			form.loginPwInput.focus();
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 			return;
 		}
 		form.loginPwConfirm.value = form.loginPwConfirm.value.trim();
@@ -41,7 +49,11 @@
 			form.loginPwConfirm.focus();
 			return;
 		}
+<<<<<<< HEAD
 		if ( form.loginPwConfirm.value != form.loginPw.value ) {
+=======
+		if ( form.loginPwConfirm.value != form.loginPwInput.value ) {
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 			alert('비밀번호가 일치하지 않습니다.');
 			form.loginPwConfirm.focus();
 			return;
@@ -71,6 +83,7 @@
 			return;
 		}
 		
+<<<<<<< HEAD
 		form.cellPhoneNo.value = form.cellPhoneNo.value.trim();
 		
 		if ( form.cellPhoneNo.value.length == 0 ) {
@@ -79,6 +92,15 @@
 			return;
 		}
 		
+=======
+		form.cellphoneNo.value = form.cellphoneNo.value.trim();
+		
+		if ( form.cellphoneNo.value.length == 0 ) {
+			alert('휴대전화번호 입력해주세요.');
+			form.cellphoneNo.focus();
+			return;
+		}
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 		form.loginPw.value = sha256(form.loginPwInput.value);
 		form.loginPwInput.value = '';
 		form.loginPwConfirm.value = '';

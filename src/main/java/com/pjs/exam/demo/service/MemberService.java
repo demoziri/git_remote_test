@@ -34,9 +34,13 @@ public class MemberService {
 		if(oldmember!=null) {
 			return ResultData.from("F-8", Ut.f("해당 이름(%s)과 이메일(%s)은 이미 사용중입니다.", name, email));
 		}
+<<<<<<< HEAD
 		
 		loginPw = Ut.sha256(loginPw); //암호화 적용
 		
+=======
+				
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 		memberRepository.join(loginId, loginPw, name, nickname, cellphoneNo, email);
 		int id = memberRepository.getLastInsertId();
 		

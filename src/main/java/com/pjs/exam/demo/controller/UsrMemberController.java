@@ -116,15 +116,23 @@ public class UsrMemberController {
 		if (Ut.empty(loginId)) {
 			return rq.jsHistoryBack("loginId(을)를 입력해주세요.");
 		}
+<<<<<<< HEAD
 		if (Ut.empty(loginPw)) {
 			return rq.jsHistoryBack("loginPw(을)를 입력해주세요.");
 		}
+=======
+		
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 		MemberVO member = memberService.getMemberByLoginId(loginId);
 		
 		if(member==null) {
 			return rq.jsHistoryBack("존재하지 않는 로그인 아이디 입니다.");
 		}
+<<<<<<< HEAD
 		if(member.getLoginPw().equals(Ut.sha256(loginPw)) == false) {
+=======
+		if(!member.getLoginPw().equals(Ut.sha256(loginPw))) {
+>>>>>>> 76b880be23bec569537ad31c681f97af0cc096e0
 			return rq.jsHistoryBack("비밀번호가 일치하지 않습니다.");
 		}
 		
